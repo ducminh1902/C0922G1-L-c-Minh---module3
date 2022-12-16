@@ -1,5 +1,5 @@
-create database quan_li_ban_hang;
-use quan_li_ban_hang;
+create database selling_manager;
+use selling_manager;
 
 create table customer(
 c_id int primary key,
