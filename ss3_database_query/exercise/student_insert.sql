@@ -126,3 +126,4 @@ from
   join `subject` on mark.sub_id = `subject`.sub_id 
 order by 
   mark.mark desc;
+  student.student_name asc;

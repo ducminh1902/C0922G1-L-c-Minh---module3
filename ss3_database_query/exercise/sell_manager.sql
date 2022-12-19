@@ -85,3 +85,16 @@ where
       customer 
       join `order` on customer.c_id = `order`.c_id
   );
+  
+  -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện
+-- trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
+select
+  `order`.o_id,
+  `order`.o_date,
+  product.product_price,
+  order_detail.od_qty,
+  (product.p_price * order_detail.od_qty) as tongtien
+from
+  `order` 
+  join order_detail od on order_detail.o_id = `order`.o_id
+  join product  on product.p_id = order_detail.p_id;
