@@ -10,4 +10,5 @@ public interface StudentService {
     void add(Student student);
 
     void delete(int id);
+
 }
