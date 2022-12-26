@@ -11,11 +11,14 @@
     <title>$Title$</title>
   </head>
   <body>
-  <h1>Product Discount Calculator</h1>
-  <br>
-  <input type="text" placeholder="Product Description">
-  <input type="text" placeholder="List Price" name="">
-  <input type="text" placeholder="Discount Percent">
-<a href="/discount"><button>Calculator</button></a>
+  <form action="/discount" method="post">
+    <h1>Product Discount Calculator</h1>
+    <br>
+    <input type="text" placeholder="Product Description">
+    <input type="text" placeholder="List Price" name="listPrice">
+    <input type="text" placeholder="Discount Percent" name="discountPercent">
+    <button type="submit">Calculator</button>
+  </form>
+
   </body>
 </html>
