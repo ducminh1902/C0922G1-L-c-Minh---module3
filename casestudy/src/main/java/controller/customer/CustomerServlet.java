@@ -16,7 +16,33 @@ import java.util.List;
 public class CustomerServlet extends HttpServlet {
     CustomerService customerService = new CustomerServiceImpl();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null){
+            action = "";
+        }
+        switch (action){
+            case "add":
+                add(request,response);
+                break;
+            default:
+                showList(request,response);
+                break;
+        }
+    }
 
+    private void add(HttpServletRequest request, HttpServletResponse response) {
+//        int id = Integer.parseInt(request.getParameter("id"));
+        int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
+        String name = request.getParameter("name");
+        String dateOfBirth = request.getParameter("dateOfBirth");
+        String gender = request.getParameter("gender");
+        String idCard = request.getParameter("idCard");
+        String phoneNumber = request.getParameter("phoneNumber");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        Customer customer = new Customer(customerTypeId,name,dateOfBirth,gender,idCard,phoneNumber,email,address);
+        customerService.add(customer);
+        showList(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,9 +76,13 @@ public class CustomerServlet extends HttpServlet {
     }
 
 
-    private void showForm(HttpServletRequest request, HttpServletResponse response) {
+    private void showForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("customer/addCustomer.jsp").forward(request,response);
     }
 
     private void delete(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        customerService.delete(id);
+        showList(request,response);
     }
 }

@@ -225,5 +225,40 @@
   </div>
   <div class="col-3" style="background: whitesmoke"></div>
 </div>
+<div class="row">
+  <div class="col-2" style="background: darkgrey"></div>
+  <div class="col-4" style="background: darkgrey">
+    <h4 style="color: white">DANANG MARRIOTT® RESORT & SPA</h4>
+    <br>
+    <b><hr style="width: 40px"></b>
+    <br>
+    <a href="" style="color: white">Overview</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="" style="color: white">Meeting & Weeding</a>
+    <br>
+    <a href="" style="color: white">Galley</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;<a href="" style="color: white">Tracking References</a>
+    <br>
+    <a href="" style="color: white">Accommodation</a>&ensp;&ensp;&ensp;&nbsp;<a href="" style="color: white">Do not sell my personal information</a>
+    <br>
+    <a href="" style="color: white">Dining</a>
+    <br>
+    <a href="" style="color: white">Experiences</a>
+    <br>
+    <br>
+    <br>
+    <p style="color: dimgrey">prod13,ACE56F99-0DCF-5E9B-9BF4-3BA03F082B34,rel-R22.12.2</p>
+  </div>
+  <div class="col-4" style="background: darkgrey">
+    <br>
+    <br>
+    <br>
+    <b><hr style="width: 40px"></b>
+    <br>
+    <br>
+    <p style="color: white">7 TRUONG SA, NGU HANH SON DISTRICT,
+      DANANG, VIETNAM</p>
+    <br>
+    <i class="fa-brands fa-facebook" style="size: 20px"></i>&ensp;<i class="fa-brands fa-youtube"></i>&ensp;<i class="fa-brands fa-instagram"></i>
+  </div>
+  <div class="col-2" style="background: darkgrey"></div>
+</div>
 </body>
 </html>

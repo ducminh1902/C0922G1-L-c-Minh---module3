@@ -13,10 +13,11 @@ public class  CustomerServiceImpl implements CustomerService {
     private String Password ="codegym";
 
     private static String DISPLAY_CUSTOMER = "select * from customer;";
-    private static String ADD_CUSTOMER = "";
+    private static String ADD_CUSTOMER = "INSERT INTO customer(customer_type_id,`name`,date_of_birth,gender,id_card,phone_number,email,address) values (?,?,?,?,?,?,?,?);";
     private static String UPDATE_CUSTOMER = "";
-    private static String DELETE_CUSTOMER = "";
+    private static String DELETE_CUSTOMER = "delete from customer where id = ?;";
     private static String FIND_BY_ID = "";
+    private static String CONSTRAIN = "SET FOREIGN_KEY_CHECKS=0;";
 
     private Connection getConnection(){
         Connection connection = null;
@@ -61,11 +62,38 @@ public class  CustomerServiceImpl implements CustomerService {
 
     @Override
     public void add(Customer customer) {
+       Connection connection = getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement =connection.prepareStatement(CONSTRAIN);
+            preparedStatement.executeUpdate();
+            preparedStatement = connection.prepareStatement(ADD_CUSTOMER);
+            preparedStatement.setInt(1,customer.getCustomerTypeId());
+            preparedStatement.setString(2,customer.getName());
+            preparedStatement.setString(3,customer.getDateOfBirth());
+            preparedStatement.setString(4,customer.getGender());
+            preparedStatement.setString(5,customer.getIdCard());
+            preparedStatement.setString(6,customer.getPhoneNumber());
+            preparedStatement.setString(7,customer.getEmail());
+            preparedStatement.setString(8,customer.getAddress());
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
     }
 
     @Override
     public void delete(int id) {
+       Connection connection = getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareCall(DELETE_CUSTOMER);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
     }
 

@@ -20,6 +20,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <div>
@@ -67,28 +68,30 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
                 <form class="d-flex">
-                    <button type="button" class="btn btn-outline-danger">Back to Menu</button>
+                    <a href="http://localhost:8080/"><button type="button" class="btn" style="background: darkred;color: white" >Back to Menu</button></a>
                 </form>
             </div>
         </div>
     </nav>
 </div>
-<h1 style="color: darkred">List Customer</h1>
+<h1 style="color: black;text-align: center">List Customer</h1>
 <table class="table" >
 <tr>
-    <th>Id</th>
-    <th>Customer Type Id</th>
-    <th>Name</th>
-    <th>Date Of Birth</th>
-    <th>Gender</th>
-    <th>Id Card</th>
-    <th>Phone Number</th>
-    <th>Email</th>
-    <th>address</th>
+    <th style="color: darkred">#</th>
+    <th style="color: darkred">Customer Type Id</th>
+    <th style="color: darkred">Name</th>
+    <th style="color: darkred">Date Of Birth</th>
+    <th style="color: darkred">Gender</th>
+    <th style="color: darkred">Id Card</th>
+    <th style="color: darkred">Phone Number</th>
+    <th style="color: darkred">Email</th>
+    <th style="color: darkred">address</th>
+    <th style="color: darkred">edit</th>
+    <th style="color: darkred">delete</th>
 </tr>
-    <c:forEach var="customer" items="${listCustomer}">
+    <c:forEach var="customer" items="${listCustomer}" varStatus="status">
         <tr>
-           <td>${customer.id}</td>
+           <td >${status.count}</td>
            <td>${customer.customerTypeId}</td>
            <td>${customer.name}</td>
            <td>${customer.dateOfBirth}</td>
@@ -97,8 +100,51 @@
            <td>${customer.phoneNumber}</td>
            <td>${customer.email}</td>
            <td>${customer.address}</td>
+           <td><button type="button" class="btn " style="color: white;background: gray"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button></td>
+           <td><a href="/customer?action=delete&id=${customer.id}">
+<%--               <button type="button" class="btn " style="color: white;background: darkred"></button>--%>
+               <button type="button" class="btn" style="background: darkred;color: white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   <i class="fa-sharp fa-solid fa-trash"></i>
+               </button>
+           </a></td>
         </tr>
     </c:forEach>
 </table>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            </ul>
+            <form class="d-flex" role="search">
+                <a href="/customer?action=add"><button type="button" class="btn " style="background:darkred;color: white">ADD NEW CUSTOMER</button></a>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/customer?action=delete" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
 </body>
 </html>
