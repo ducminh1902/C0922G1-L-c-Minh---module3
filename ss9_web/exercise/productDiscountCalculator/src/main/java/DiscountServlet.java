@@ -13,11 +13,9 @@ public class DiscountServlet extends HttpServlet {
         int discountPercent = Integer.parseInt(request.getParameter("discountPercent"));
         Double discountAmount = listPrice * discountPercent * 0.01;
         Double discountPrice = listPrice - discountAmount;
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println("<html>");
-        printWriter.println("<h1>Discount Amount: " + discountAmount + "$"+ "</h1>");
-        printWriter.println("<h1>Discount Price: " + discountPrice + "$"+"</h1>");
-        printWriter.println("</html>");
+        request.setAttribute("discountAmount",discountAmount);
+        request.setAttribute("discountPrice",discountPrice);
+        request.getRequestDispatcher("result.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

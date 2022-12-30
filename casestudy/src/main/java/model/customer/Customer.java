@@ -5,7 +5,7 @@ public class Customer {
     private  int customerTypeId;
     private String name;
     private String dateOfBirth;
-    private String gender;
+    private boolean gender;
     private String idCard;
     private String phoneNumber;
     private String email;
@@ -14,7 +14,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int customerTypeId, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address) {
+    public Customer(int customerTypeId, String name, String dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
         this.customerTypeId = customerTypeId;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -25,7 +25,7 @@ public class Customer {
         this.address = address;
     }
 
-    public Customer(int id, int customerTypeId, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address) {
+    public Customer(int id, int customerTypeId, String name, String dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
         this.id = id;
         this.customerTypeId = customerTypeId;
         this.name = name;
@@ -69,11 +69,11 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getGender() {
+    public boolean isGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(boolean gender) {
         this.gender = gender;
     }
 

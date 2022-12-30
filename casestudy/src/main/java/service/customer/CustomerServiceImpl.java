@@ -45,7 +45,7 @@ public class  CustomerServiceImpl implements CustomerService {
                 int customertypeId = rs.getInt("customer_type_id");
                 String name = rs.getString("name");
                 String dateOfBirth = rs.getString("date_of_birth");
-                String gender = rs.getString("gender");
+                Boolean gender = rs.getBoolean("gender");
                 String idCard = rs.getString("id_card");
                 String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
@@ -71,7 +71,7 @@ public class  CustomerServiceImpl implements CustomerService {
             preparedStatement.setInt(1,customer.getCustomerTypeId());
             preparedStatement.setString(2,customer.getName());
             preparedStatement.setString(3,customer.getDateOfBirth());
-            preparedStatement.setString(4,customer.getGender());
+            preparedStatement.setBoolean(4,customer.isGender());
             preparedStatement.setString(5,customer.getIdCard());
             preparedStatement.setString(6,customer.getPhoneNumber());
             preparedStatement.setString(7,customer.getEmail());

@@ -33,10 +33,9 @@ public class CalculatorServlet extends HttpServlet {
                  result = firstNumber / secondNumber;
                  break;
          }
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println("<html>");
-        printWriter.println("<h1>Your result : "+ result  + "</h1>");
-        printWriter.println("</html>");
+         request.setAttribute("result",result);
+         request.getRequestDispatcher("result.jsp").forward(request,response);
+   
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

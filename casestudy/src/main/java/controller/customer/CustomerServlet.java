@@ -35,7 +35,7 @@ public class CustomerServlet extends HttpServlet {
         int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
         String name = request.getParameter("name");
         String dateOfBirth = request.getParameter("dateOfBirth");
-        String gender = request.getParameter("gender");
+        Boolean gender = Boolean.valueOf(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phoneNumber = request.getParameter("phoneNumber");
         String email = request.getParameter("email");

@@ -20,7 +20,9 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 <div>
@@ -68,59 +70,91 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
                 <form class="d-flex">
-                    <a href="http://localhost:8080/"><button type="button" class="btn" style="background: darkred;color: white" >Back to Menu</button></a>
+                    <a href="http://localhost:8080/">
+                        <button type="button" class="btn" style="background: darkred;color: white">Back to Menu</button>
+                    </a>
                 </form>
             </div>
         </div>
     </nav>
 </div>
 <h1 style="color: black;text-align: center">List Customer</h1>
-<table class="table" >
-<tr>
-    <th style="color: darkred">#</th>
-    <th style="color: darkred">Customer Type Id</th>
-    <th style="color: darkred">Name</th>
-    <th style="color: darkred">Date Of Birth</th>
-    <th style="color: darkred">Gender</th>
-    <th style="color: darkred">Id Card</th>
-    <th style="color: darkred">Phone Number</th>
-    <th style="color: darkred">Email</th>
-    <th style="color: darkred">address</th>
-    <th style="color: darkred">edit</th>
-    <th style="color: darkred">delete</th>
-</tr>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search by name" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+</nav>
+<table class="table">
+    <tr>
+        <th style="color: darkred">#</th>
+        <th style="color: darkred">Customer Type Id</th>
+        <th style="color: darkred">Name</th>
+        <th style="color: darkred">Date Of Birth</th>
+        <th style="color: darkred">Gender</th>
+        <th style="color: darkred">Id Card</th>
+        <th style="color: darkred">Phone Number</th>
+        <th style="color: darkred">Email</th>
+        <th style="color: darkred">address</th>
+        <th style="color: darkred">edit</th>
+        <th style="color: darkred">delete</th>
+    </tr>
     <c:forEach var="customer" items="${listCustomer}" varStatus="status">
         <tr>
-           <td >${status.count}</td>
-           <td>${customer.customerTypeId}</td>
-           <td>${customer.name}</td>
-           <td>${customer.dateOfBirth}</td>
-           <td>${customer.gender}</td>
-           <td>${customer.idCard}</td>
-           <td>${customer.phoneNumber}</td>
-           <td>${customer.email}</td>
-           <td>${customer.address}</td>
-           <td><button type="button" class="btn " style="color: white;background: gray"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button></td>
-           <td><a href="/customer?action=delete&id=${customer.id}">
-<%--               <button type="button" class="btn " style="color: white;background: darkred"></button>--%>
-               <button type="button" class="btn" style="background: darkred;color: white" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                   <i class="fa-sharp fa-solid fa-trash"></i>
-               </button>
-           </a></td>
+            <td>${status.count}</td>
+            <td>${customer.customerTypeId}</td>
+            <td>${customer.name}</td>
+            <td>${customer.dateOfBirth}</td>
+<%--          <c:choose>--%>
+<%--              <c:when test="${customer.gender = 1}">--%>
+<%--                  <td>Nam</td>--%>
+<%--              </c:when>--%>
+<%--              <c:otherwise>--%>
+<%--                  <td>Nữ</td>--%>
+<%--              </c:otherwise>--%>
+<%--          </c:choose>--%>
+            <c:if test="${customer.gender}">
+                <td>Nam</td>
+            </c:if>
+            <c:if test="${!customer.gender}">
+                <td>Nữ</td>
+            </c:if>
+            <td>${customer.idCard}</td>
+            <td>${customer.phoneNumber}</td>
+            <td>${customer.email}</td>
+            <td>${customer.address}</td>
+            <td>
+                <button type="button" class="btn " style="color: white;background: gray"><i
+                        class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+            </td>
+            <td><a href="/customer?action=delete&id=${customer.id}">
+                    <%--               <button type="button" class="btn " style="color: white;background: darkred"></button>--%>
+                <button type="button" class="btn" style="background: darkred;color: white" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                    <i class="fa-sharp fa-solid fa-trash"></i>
+                </button>
+            </a></td>
         </tr>
     </c:forEach>
 </table>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" >
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             </ul>
             <form class="d-flex" role="search">
-                <a href="/customer?action=add"><button type="button" class="btn " style="background:darkred;color: white">ADD NEW CUSTOMER</button></a>
+                <a href="/customer?action=add">
+                    <button type="button" class="btn " style="background:darkred;color: white">ADD NEW CUSTOMER</button>
+                </a>
             </form>
         </div>
     </div>
