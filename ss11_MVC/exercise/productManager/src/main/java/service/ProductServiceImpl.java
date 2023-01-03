@@ -42,4 +42,15 @@ public class ProductServiceImpl implements ProductService {
             }
         }
     }
+
+    @Override
+    public Product findByID(int id) {
+        Product product = new Product();
+        for (Product x: productList) {
+            if (x.getId() == id){
+             product=x;
+            }
+        }
+        return product;
+    }
 }

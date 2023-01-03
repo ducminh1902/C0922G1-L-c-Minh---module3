@@ -15,26 +15,21 @@
 </head>
 <body>
 <form action="/product?action=add" method="post">
-    <h1>Product Information</h1>
+    <h1 style="color: orange">Product Information</h1>
     <br>
     <p>ID</p>
-    <br>
     <input type="text" name="id">
     <br>
     <p>Name</p>
-    <br>
     <input type="text" name="name">
     <br>
     <p>Price</p>
-    <br>
     <input type="text" name="price">
     <br>
     <p>Describe</p>
-    <br>
     <input type="text" name="describe">
     <br>
     <p>Brand</p>
-    <br>
     <input type="text" name="brand">
     <br>
     <button type="submit"  type="button" class="btn btn-warning">ADD</button>

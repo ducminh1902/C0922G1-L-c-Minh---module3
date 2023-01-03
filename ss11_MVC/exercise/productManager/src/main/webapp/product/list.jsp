@@ -16,6 +16,15 @@
 </head>
 <body>
 <h1 style="color: orange;text-align: center">Product List</h1>
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
 <table class="table table-warning table-striped">
     <tr>
         <th>Id</th>
@@ -24,6 +33,7 @@
         <th>Describe</th>
         <th>Brand</th>
         <th>Delete</th>
+        <th>Edit</th>
     </tr>
     <c:forEach var="product" items="${listProduct}">
         <tr>
@@ -33,6 +43,7 @@
             <td>${product.describe}</td>
             <td>${product.brand}</td>
             <td><a href="/product?action=delete&id=${product.id}"><button type="button" class="btn btn-outline-warning"><i class="fa-sharp fa-solid fa-trash"></i></button></a></td>
+            <td><a href="/product?action=update&id=${product.id}"><button type="button" class="btn btn-outline-warning"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button></a></td>
         </tr>
     </c:forEach>
 </table>
