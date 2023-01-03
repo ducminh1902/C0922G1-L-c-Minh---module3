@@ -19,7 +19,9 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 <div>
@@ -67,7 +69,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
                 <form class="d-flex">
-                    <a href="/customer"><button type="button" class="btn" style="background: darkred;color: white" >Back to list</button></a>
+                    <a href="/customer">
+                        <button type="button" class="btn" style="background: darkred;color: white">Back to list</button>
+                    </a>
                 </form>
             </div>
         </div>
@@ -75,40 +79,80 @@
 </div>
 <form action="/customer?action=add" method="post">
     <h1 style="text-align: center">Insert Customer Information</h1>
-    <br>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="CTI" name="customerTypeId">
-        <label for="CTI"> Customer Type Id</label>
+<%--    <br>--%>
+<%--    <h6>Customer Type Id</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="customerTypeId">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Name</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="name">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Date Of Birth</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="dateOfBirth">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Gender</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="gender">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Id Card</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="idCard">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Phone Number</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="phoneNumber">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Email</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="email">--%>
+<%--    <br>--%>
+<%--    <br>--%>
+<%--    <h6>Address</h6>--%>
+<%--    <br>--%>
+<%--    <input type="text" name="address">--%>
+<%--    <br>--%>
+
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label" style="color: darkred"><b>Customer Type Id</b></label>
+        <input type="text" class="form-control"  placeholder="Number" name="customerTypeId">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="name" name="name">
-        <label for="name"> Name</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Name</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nguyen Van A" name="name">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="DOB" name="dateOfBirth">
-        <label for="DOB"> Date Of Birth</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Date Of Birth</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="YYY-MMM-DDD" name="dateOfBirth">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="gender" name="gender">
-        <label for="gender"> Gender</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Gender</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Male:1 // Female:0" name="gender">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="IC" name="idCard">
-        <label for="IC"> Id Card</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Id Card</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput5" placeholder="Number" name="idCard">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="PN" name="phoneNumber">
-        <label for="PN">Phone Number</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Phone Number</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput6" placeholder="Number" name="phoneNumber">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="Email" name="email">
-        <label for="Email"> Email</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Email</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput7" placeholder="Number" name="email">
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="Address" name="address">
-        <label for="Address"> Address</label>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label" style="color: darkred"><b>Address</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your now address" name="address">
     </div>
-    <br>
     <button type="submit" class="btn " style="background: darkred;color: white">Add New Customer</button>
 </form>
 

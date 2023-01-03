@@ -1,0 +1,39 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: ASUS
+  Date: 1/2/2023
+  Time: 10:37 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head >
+  <title>$Title$</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body background="https://img.freepik.com/free-vector/blurred-valentine-s-day-background_52683-31160.jpg?w=2000">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 style="text-align: center">Mình không thích lăng nhăn</h3>
+<h3 style="text-align: center">Vì  mình thích sống chung
+  <a href="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/306966444_1164484614150745_1962687905165942117_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=S5OPDNoTaMkAX-OC1FE&_nc_ht=scontent.fdad3-5.fna&oh=00_AfCUXeejMgUlCieOESwvtdBgbgaePnCWiIcW_OezIxSy0w&oe=63B86848" style="text-decoration: none;color: hotpink;">
+    Thủy  <i
+          class="fa-sharp fa-solid fa-heart fa-1xl" style="color: hotpink;height: 500px"></i>
+    <br>
+    <h1 style="text-align: center">UwU <3333</h1></a></h3>
+
+</body>
+</html>

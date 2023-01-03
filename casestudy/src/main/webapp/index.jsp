@@ -66,7 +66,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
         <form class="d-flex">
-          <a href="" style="color: black"><b>Oveview</b></a>
+          <a href="" style="color: black"><b>Home</b></a>
           &ensp;&ensp;&ensp;
           <a href="/customer" style="color: gray;text-decoration: none">Customer</a>
           &ensp;&ensp;&ensp;

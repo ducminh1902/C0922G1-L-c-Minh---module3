@@ -13,7 +13,7 @@ public class  CustomerServiceImpl implements CustomerService {
     private String Password ="codegym";
 
     private static String DISPLAY_CUSTOMER = "select * from customer;";
-    private static String ADD_CUSTOMER = "INSERT INTO customer(customer_type_id,`name`,date_of_birth,gender,id_card,phone_number,email,address) values (?,?,?,?,?,?,?,?);";
+    private static String ADD_CUSTOMER = "insert into customer(customer_type_id,`name`,date_of_birth,gender,id_card,phone_number,email,address) values(?,?,?,?,?,?,?,?);";
     private static String UPDATE_CUSTOMER = "";
     private static String DELETE_CUSTOMER = "delete from customer where id = ?;";
     private static String FIND_BY_ID = "";

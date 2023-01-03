@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @WebServlet(name = "CustomerServlet",urlPatterns = {"/customer"})
@@ -30,7 +31,7 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    private void add(HttpServletRequest request, HttpServletResponse response) {
+    private void add(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 //        int id = Integer.parseInt(request.getParameter("id"));
         int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
         String name = request.getParameter("name");

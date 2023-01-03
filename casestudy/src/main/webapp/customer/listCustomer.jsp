@@ -109,14 +109,6 @@
             <td>${customer.customerTypeId}</td>
             <td>${customer.name}</td>
             <td>${customer.dateOfBirth}</td>
-<%--          <c:choose>--%>
-<%--              <c:when test="${customer.gender = 1}">--%>
-<%--                  <td>Nam</td>--%>
-<%--              </c:when>--%>
-<%--              <c:otherwise>--%>
-<%--                  <td>Nữ</td>--%>
-<%--              </c:otherwise>--%>
-<%--          </c:choose>--%>
             <c:if test="${customer.gender}">
                 <td>Nam</td>
             </c:if>

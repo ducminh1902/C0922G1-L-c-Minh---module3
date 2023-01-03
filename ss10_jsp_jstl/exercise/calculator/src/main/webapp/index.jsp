@@ -21,10 +21,10 @@
     <br>
     <br>
     Operator : <select name="selector">
-      <option style="color: cadetblue">Addition(+)</option>
-      <option style="color: cadetblue">Subtraction (-)</option>
-      <option style="color: cadetblue">Multiplication (x)</option>
-      <option style="color: cadetblue">Division (/)</option>
+      <option style="color: cadetblue" value="+">Addition(+)</option>
+      <option style="color: cadetblue" value="-">Subtraction (-)</option>
+      <option style="color: cadetblue" value="*">Multiplication (x)</option>
+      <option style="color: cadetblue" value="/">Division (/)</option>
     </select>
     <br>
     <br>
