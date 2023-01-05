@@ -54,7 +54,6 @@ public class ProductServlet extends HttpServlet {
         Product product = new Product(id,name,price,describe,brand);
         productService.add(product);
         showList(request,response);
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

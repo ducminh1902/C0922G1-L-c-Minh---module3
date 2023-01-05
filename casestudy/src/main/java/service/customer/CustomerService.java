@@ -11,5 +11,7 @@ public interface CustomerService {
 
     void delete(int id);
 
-    void update(Customer customer);
+    boolean update(Customer customer);
+
+    Customer findBYId(int id);
 }

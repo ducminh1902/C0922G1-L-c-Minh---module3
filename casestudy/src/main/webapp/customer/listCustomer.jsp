@@ -84,7 +84,7 @@
         <a class="navbar-brand"></a>
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search by name" aria-label="Search">
-            <button class="btn btn-outline-danger" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+           <button class="btn btn-outline-danger" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
     </div>
@@ -92,7 +92,7 @@
 <table class="table">
     <tr>
         <th style="color: darkred">#</th>
-        <th style="color: darkred">Customer Type Id</th>
+<%--        <th style="color: darkred">Customer Type Id</th>--%>
         <th style="color: darkred">Name</th>
         <th style="color: darkred">Date Of Birth</th>
         <th style="color: darkred">Gender</th>
@@ -106,7 +106,7 @@
     <c:forEach var="customer" items="${listCustomer}" varStatus="status">
         <tr>
             <td>${status.count}</td>
-            <td>${customer.customerTypeId}</td>
+<%--            <td>${customer.customerTypeId}</td>--%>
             <td>${customer.name}</td>
             <td>${customer.dateOfBirth}</td>
             <c:if test="${customer.gender}">
@@ -120,11 +120,14 @@
             <td>${customer.email}</td>
             <td>${customer.address}</td>
             <td>
-                <button type="button" class="btn " style="color: white;background: gray"><i
-                        class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+                <a href="/customer?action=update&id=${customer.id}">
+                    <button type="button" class="btn" style="background: darkred;color: white" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                    </button>
+                </a>
             </td>
             <td><a href="/customer?action=delete&id=${customer.id}">
-                    <%--               <button type="button" class="btn " style="color: white;background: darkred"></button>--%>
                 <button type="button" class="btn" style="background: darkred;color: white" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
                     <i class="fa-sharp fa-solid fa-trash"></i>
@@ -133,6 +136,8 @@
         </tr>
     </c:forEach>
 </table>
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -151,26 +156,5 @@
         </div>
     </div>
 </nav>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form action="/customer?action=delete" method="post">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </form>
-
-    </div>
-</div>
 </body>
 </html>
