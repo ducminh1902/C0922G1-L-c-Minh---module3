@@ -81,12 +81,21 @@ public class CustomerServlet extends HttpServlet {
            case "update":
                showFormUpdate(request,response);
                break;
+           case "find":
+               find(request,response);
+               break;
            default:
                showList(request,response);
                break;
        }
     }
 
+    private void find(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        List<Customer> customerList = customerService.findByName(name);
+        request.setAttribute("listCustomer",customerList);
+        request.getRequestDispatcher("customer/listCustomer.jsp").forward(request,response);
+    }
 
 
     private void showFormUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

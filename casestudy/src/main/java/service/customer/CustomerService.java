@@ -14,4 +14,7 @@ public interface CustomerService {
     boolean update(Customer customer);
 
     Customer findBYId(int id);
+
+    List<Customer> findByName(String name);
+
 }

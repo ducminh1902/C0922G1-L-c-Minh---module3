@@ -18,6 +18,7 @@ public class  CustomerServiceImpl implements CustomerService {
     private static String DELETE_CUSTOMER = "delete from customer where id = ?;";
     private static String FIND_BY_ID = "select * from customer where id = ?;";
     private static String CONSTRAIN = "SET FOREIGN_KEY_CHECKS=0;";
+    private static String FIND_BY_NAME = " select * from customer where `name` like ?;";
 
     private Connection getConnection(){
         Connection connection = null;
@@ -162,6 +163,37 @@ public class  CustomerServiceImpl implements CustomerService {
         }
 
         return customer;
+    }
+
+    @Override
+    public List<Customer> findByName(String name) {
+        Connection connection = getConnection();
+        List<Customer> customerList = new ArrayList<>();
+        Customer customer = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareCall(FIND_BY_NAME);
+            preparedStatement.setString(1,"%"+name +"%");
+            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                int id = rs.getInt("id");
+                int customerTypeId = rs.getInt("customer_type_id");
+                String name1 = rs.getString("name");
+                String dateOfBirth = rs.getString("date_of_birth");
+                Boolean gender = rs.getBoolean("gender");
+                String idCard = rs.getString("id_card");
+                String phoneNumber = rs.getString("phone_number");
+                String email = rs.getString("email");
+                String address = rs.getString("address");
+                customer = new Customer(id,customerTypeId,name1,dateOfBirth,gender,idCard,phoneNumber,email,address);
+                customerList.add(customer);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return customerList;
     }
 
 }

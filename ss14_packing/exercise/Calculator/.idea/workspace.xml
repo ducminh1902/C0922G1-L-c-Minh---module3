@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d752e54c-945a-4111-97d2-558c560d6423" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../casestudy/src/main/java/model/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../casestudy/src/main/java/service/employee/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../casestudy/src/main/java/service/employee/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/build/classes/java/main/controller/customer/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/build/classes/java/main/controller/customer/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/build/classes/java/main/service/customer/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/build/classes/java/main/service/customer/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/build/classes/java/main/service/customer/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/build/classes/java/main/service/customer/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/build/libs/casestudy-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/build/libs/casestudy-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/src/main/java/controller/customer/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/src/main/java/controller/customer/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/src/main/java/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/src/main/java/service/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/src/main/java/service/customer/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/src/main/java/service/customer/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/src/main/webapp/customer/listCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/src/main/webapp/customer/listCustomer.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2Jwf4JFzm6F2srcpL9H7iEwCoWh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d752e54c-945a-4111-97d2-558c560d6423" name="Default Changelist" comment="" />
+      <created>1672993873288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672993873288</updated>
+      <workItem from="1672993875578" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="209" y="19" key="new project wizard" timestamp="1672993895421">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="209" y="19" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1672993895421" />
+  </component>
+</project>

@@ -82,12 +82,13 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand"></a>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search by name" aria-label="Search">
+        <form class="d-flex" action="/customer?action=find" method="get">
+            <input type="hidden" name="action" value="find">
+            <input class="form-control me-2" name="name" type="search" placeholder="Search by name" aria-label="Search">
            <button class="btn btn-outline-danger" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
-    </div>
+    </div>`
 </nav>
 <table class="table">
     <tr>
