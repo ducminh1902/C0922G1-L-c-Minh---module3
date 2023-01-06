@@ -9,14 +9,14 @@ public class PhuongTrinhBac2 {
         double x1 ;
         double x2 ;
         if (delta < 0) {
-            System.out.println("Phương trình vô nghiệm!");
+            System.out.println("Phương trình này không có nghiệm!");
         } else if (delta == 0) {
             x1 = (-b / (2 * a));
-            return "Phương trinh có 1 nghiệm là x1 = x2 = " + x1;
+            return "Phương trình bậc 2 này có 1 nghiệm là x1 = x2 = " + x1;
         } else {
             x1 = (-b + Math.sqrt(delta)) / (2 * a);
             x2 = (-b - Math.sqrt(delta)) / (2 * a);
-            return "Phương trình có 2 nghiệm x1 = " + x1 + " và x2 = " + x2;
+            return "Phương trình bậc 2 này có 2 nghiệm x1 = " + x1 + " và x2 = " + x2;
         }
         return null;
 
