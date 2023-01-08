@@ -153,7 +153,7 @@
 
             </ul>
             <form class="d-flex" role="search">
-                <a href="/customer?action=add">
+                <a href="/employee?action=add">
                     <button type="button" class="btn " style="background:darkred;color: white">ADD NEW EMPLOYEE</button>
                 </a>
             </form>
