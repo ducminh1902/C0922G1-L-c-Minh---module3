@@ -70,7 +70,7 @@
           &ensp;&ensp;&ensp;
           <a href="/customer" style="color: gray;text-decoration: none">Customer</a>
           &ensp;&ensp;&ensp;
-          <a href="" style="color: gray;text-decoration: none">Employee</a>
+          <a href="/employee" style="color: gray;text-decoration: none">Employee</a>
           &ensp;&ensp;&ensp;
           <a href="" style="color: gray;text-decoration: none">Dining</a>
           &ensp;&ensp;&ensp;

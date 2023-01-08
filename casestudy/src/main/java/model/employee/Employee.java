@@ -12,12 +12,12 @@ public class Employee {
     private int positionId;
     private int educationDegreeId;
     private int divisionId;
-    private int username;
+    private String username;
 
     public Employee() {
     }
 
-    public Employee(String name, String dateOfBirth, String idCard, double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, int username) {
+    public Employee(String name, String dateOfBirth, String idCard, double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, String username) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.idCard = idCard;
@@ -31,7 +31,7 @@ public class Employee {
         this.username = username;
     }
 
-    public Employee(int id, String name, String dateOfBirth, String idCard, double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, int username) {
+    public Employee(int id, String name, String dateOfBirth, String idCard, double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, String username) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -135,11 +135,11 @@ public class Employee {
         this.divisionId = divisionId;
     }
 
-    public int getUsername() {
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername(int username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 }
